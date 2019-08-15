@@ -1,10 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider } from 'react-redux'
+import ErrorBoundary from './pages/common/ErrorBoundary/ErrorBoundary'
 import App from './App';
+import store from './store'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    (
+        <ErrorBoundary>
+            <Provider store={store}>
+                <App />
+            </Provider>
+        </ErrorBoundary>
+    ), 
+    document.getElementById('app-root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
