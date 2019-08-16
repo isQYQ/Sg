@@ -46,7 +46,7 @@ const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 const AppPanel = (props)=>{
   return (
     <Router>
-      <div className="app">
+      <div id="app">
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
