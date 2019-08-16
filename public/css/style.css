@@ -16,6 +16,12 @@ html, body, #app{
     bottom: 0;
     z-index: 10;
 }
+.page.content{
+    width:100%;
+    position:absolute;
+    top:44px;
+    bottom:0;
+}
 .slideInRight, .slideOutRight{
     animation-duration: 200ms;
 }
