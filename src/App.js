@@ -50,7 +50,7 @@ const AppPanel = (props)=>{
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
-            return <Redirect to="/home"/>
+            return <Redirect to="/mine"/>
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>

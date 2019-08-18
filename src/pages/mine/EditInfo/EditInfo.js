@@ -1,9 +1,15 @@
 import React from 'react'
 import './style.scss'
+import AppHeader from '../../../components/app-header/app-header';
+
 const EditInfo = (props)=>{
     return (
         <div className="page subpage" id="edit-info">
-            <h1>编辑个人信息</h1>
+             <AppHeader title='编辑信息'
+                left={<span className="iconfont icon-back"></span>}
+                right={<span className='right'>完成</span>}
+                leftClick={()=>{props.history.goBack()}}
+            />
         </div>
     )
 }
