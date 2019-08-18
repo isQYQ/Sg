@@ -4,11 +4,19 @@
     position: absolute;
     top: 0;
     left: 0;
+    background: #fff;
+    .iconfont{
+        color: #808080;
+        font-size: 24px;
+    }
     .title{
         width: 100%;
         line-height: 44px;
         text-align: center;
-        font-size: 16px;
+        font-size: 18px;
+        color: #333;
+        font-family: PingFang-SC-Bold;
+        font-weight: bold;
     }
     .header-btn{
         height: 24px;
@@ -25,3 +33,6 @@
         }
     }
 }
+
+    
+ 

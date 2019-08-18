@@ -50,7 +50,7 @@ const AppPanel = (props)=>{
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
-            return <Redirect to="/home"/>
+            return <Redirect to="/mine"/>
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>
@@ -78,8 +78,11 @@ const AppPanel = (props)=>{
           <Route path="/mine/change/psw" component={ChangePassword} />
           <Route path="/mine/change/unit" component={ChangeUnit} />
           <Route path="/mine/contact/us" component={ContactUs} />
+          
           <Route path="/mine/edit/info" component={EditInfo} />
-          <Route path="/mine/message" component={Message} />
+
+          <Route path="/mine/message" component={Message} />  
+
           <Route path="/mine/privacy" component={PrivacyPolicy} />
           <Route path="/mine/recipe/book" component={RecipeBook} />
           <Route path="/mine/set" component={SetOption} />

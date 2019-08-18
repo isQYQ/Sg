@@ -1,6 +1,9 @@
 html,p,body,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,input,img,form,table,tr,td,select,input,fieldset,legend{
     margin:0;padding: 0;
 }
+html{
+    /* font-size: 100px; */
+}
 a{
     text-decoration: none;
     color: #333;

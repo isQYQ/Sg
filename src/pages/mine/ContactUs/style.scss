@@ -1,0 +1,30 @@
+#contact-us{
+    .content{
+        background: #fff;
+        .content-nav{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            margin: 80px auto 30px;
+            img{
+                width: 132px;
+                height: 167px;
+            }
+        }
+        .content-list{
+            padding-left: 20px;
+            .item{
+                height: 60px;
+                line-height: 60px;
+                span{
+                    margin-right: 10px;
+                    img{
+                        vertical-align: middle;
+                        width: 31px;
+                        height: 31px;
+                    }
+                }
+            }
+        }
+    }
+}

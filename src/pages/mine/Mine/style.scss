@@ -1,3 +1,65 @@
 #mine{
-    background: lightgreen；
+    .content{
+        background: #fff;
+        .info{
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 0;
+            span{
+                margin-bottom: 20px;
+            }
+            span:nth-of-type(1){
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid #333;
+                margin: 20px auto;
+                img{
+                  
+                }
+            }
+            .btn{
+                background: #68CECE;
+                width: 110px;
+                height: 30px;        
+                border-radius:15px;
+                line-height: 30px;
+                color: #fff;
+                margin: 0 auto;
+                padding: 2px 4px;
+            }
+        }
+        .menuAndArticle{
+            margin-top: 20px;
+            .title{
+                span{
+                    margin-left: 22px;
+                    color: #333;
+                    font-size: 14px;
+                }
+                .active{
+                    background: #68CECE;
+                    border-radius: 5px;
+                    padding: 2px 6px;
+                    opacity: .6
+                }
+            }
+            .contentAll{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                span{
+                    display: block;
+                    width: 40%;
+                    height: 80px;
+                    background: pink;
+                    border-radius: 8px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }
