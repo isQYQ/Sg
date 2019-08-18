@@ -10,7 +10,6 @@
   <title>Document</title>
   <script>
     (function (doc, win) {
-      console.log(document.documentElement.clientWidth)
       var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {

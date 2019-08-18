@@ -23,13 +23,28 @@ let recipeList = [
 ]
 const recipeListDOM = recipeList.map(item=>(
     <li key={item.id} className="list-item">
+        <span className="desc">{item.value}</span>
         <img src={item.url} alt=""/>
     </li>
 ))
 const Recipe = (props)=>{
+    let {data} = props;
     return (
         <AppScroll className="recipe box">
-            {recipeListDOM}
+            {/* {recipeListDOM} */}
+            {
+                data.map((item,index)=>(
+                    <li
+                        key={index}
+                        className="list-item"
+                    >
+                        <div className="mask">
+                            <span className="desc">{item.typeName}</span>
+                        </div>
+                        <img src={item.pic} alt=""/>
+                    </li>
+                ))
+            }
         </AppScroll>
     )
 }

@@ -24,6 +24,8 @@ const DiscoverRecipeItem = lazy(()=>import('./pages/discover/DiscoverRecipeItem/
 const DiscoverRecipeItemDetail = lazy(()=>import('./pages/discover/DiscoverRecipeItemDetail/DiscoverRecipeItemDetail'));
 const DiscoverResult = lazy(()=>import('./pages/discover/DiscoverResult/DiscoverResult'));
 const DiscoverWikipediaDetail = lazy(()=>import('./pages/discover/DiscoverWikipediaDetail/DiscoverWikipediaDetail'));
+//文章
+const ArticleDetail = lazy(()=>import('./pages/article/ArticleDetail/ArticleDetail'));
 //我的
 const ChangePassword = lazy(()=>import('./pages/mine/ChangePassword/ChangePassword'))
 const ChangeUnit = lazy(()=>import('./pages/mine/ChangeUnit/ChangeUnit'))
@@ -56,8 +58,6 @@ const AppPanel = (props)=>{
           <Route path='/discover' exact component={Discover}/>
           <Route path='/article' exact component={Article}/>
           <Route path='/mine' exact component={Mine}/>
-          <Route component={NotFind}/>
-        </Switch>
 
         {/* 子页面 */}
           {/* 登录 */}
@@ -66,7 +66,6 @@ const AppPanel = (props)=>{
           <Route path="/login/weixin/confirm" component={WeixinConfirm} />
           <Route path="/login/register" component={Register} />
           {/* 首页 */}
-          {/* <Route path= component={HomeRecipeDetail} /> */}
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
 
           {/* 发现页 */}
@@ -74,6 +73,10 @@ const AppPanel = (props)=>{
           <Route path="/discover/recipe/detail/:id" component={DiscoverRecipeItemDetail} />
           <Route path="/discover/result/:keywords" component={DiscoverResult} />
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
+
+          {/* 文章 */}
+          <Route path="/article/detail" component={ArticleDetail} />
+
           {/* 我的 */}
           <Route path="/mine/change/psw" component={ChangePassword} />
           <Route path="/mine/change/unit" component={ChangeUnit} />
@@ -83,9 +86,8 @@ const AppPanel = (props)=>{
           <Route path="/mine/privacy" component={PrivacyPolicy} />
           <Route path="/mine/recipe/book" component={RecipeBook} />
           <Route path="/mine/set" component={SetOption} />
-
-
-          {/* <Route component={NotFind}/> */}
+          <Route component={NotFind}/>
+          </Switch>
 
 
         {/* 导航栏 */}

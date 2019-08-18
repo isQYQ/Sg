@@ -45,6 +45,7 @@
         }
     }
     .box{
+      width: 100%;
       position: absolute;
       top:79px;
       left: 0;
@@ -52,6 +53,7 @@
     }
     .recipe{
       width: 100%;
+      font-size: 12px;
       .scroll-content{
         display: flex;
         flex-wrap: wrap;
@@ -62,9 +64,117 @@
         .list-item{
           width: 30%;
           margin-bottom: 15px;
+          border-radius: 10px;
+          height: 150px;
+          overflow: hidden;
+          position: relative;
           img{
             width: 100%;
+            transform: scale(1.2)
           }
+          .mask{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            background: linear-gradient(
+              rgba(0,0,0,0),
+              rgba(0,0,0,0.4)
+            )
+          }
+        }
+      }
+    }
+    .desc{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color:#fafafa;
+      z-index: 1;
+    }
+    .wikipe{
+      .scroll-content{
+        padding: 20px;
+        .wikepedia-item{
+          position: relative;
+          text-align: center;
+          margin-bottom: 20px;
+          .icon{
+            display: block;
+            width: 335px;
+            height: 188px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+             width: 100%;
+             height: 100%;
+             transform: scale(1.5);
+            }
+          }
+          .desc{
+            position: absolute;
+            bottom: 0;
+            width: 335px;
+            height: 188px;
+            background: linear-gradient(
+            rgba(0,0,0,0),
+            rgba(0,0,0,.7),
+            );
+            border-radius: 10px;
+            .title{
+              display: block;
+              width: 50px;
+              border-bottom: 1px solid #D0D0D0;
+              color: #FBFFFF;
+              padding-bottom: 5px;
+              font-size: 12px;
+              margin: 10px auto;
+              margin-top: 57px;
+            }
+            .name{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .user{
+      padding: 20px;
+      box-sizing: border-box;
+      .scroll-content{
+        min-height: 520px;
+        padding-top: 20px;
+      }
+      .list-item{
+        width:335px;
+        height: 74px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        margin: 0 auto 12px;
+        background:rgba(245,245,245,1);
+        box-shadow:0px 2px 5px 0px rgba(0, 0, 0, 0.35);
+        border-radius:20px;
+        .pic{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            overflow: hidden;
+          img{
+            width: 40px;
+            height: 40px;
+          }
+        }
+        .iconfont{
+          font-size: 20px;
+          color: #68CECE;
+          font-weight: 600;
         }
       }
     }
