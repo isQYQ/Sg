@@ -16,6 +16,20 @@ html, body,#app{
     bottom: 0;
     z-index: 10;
 }
+<<<<<<< HEAD
+.page.content{
+    width:100%;
+    position:absolute;
+    top:44px;
+    bottom:0;
+}
+=======
+<<<<<<< HEAD:public/css/style.css
+.slideInRight, .slideOutRight{
+    animation-duration: 200ms;
+}
+=======
+>>>>>>> 11d5c4b1d0edf663504b2054baacc6c641edda80
 .mask{
     position: absolute;
     top: 0;
@@ -28,3 +42,4 @@ html, body,#app{
       rgba(0,0,0,0.4)
     )
   }
+>>>>>>> 940fd1beecb5488a45f809f9604a21232fbc1862:src/style.scss

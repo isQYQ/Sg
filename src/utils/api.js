@@ -1,6 +1,6 @@
 //home
-
-
+const REQUEST_HOME_RECIPE_LIST = '/menuController/getAllMenu'
+const REQUEST_ARTICLE_RECIPE_LIST = '/articlecontroller/list'
 
 //discover
 const GET_DISCOVER_RECIPE_LIST_API = '/findController/getAllFindName'
@@ -19,6 +19,8 @@ const GET_USER_LIKE_RECIPE_API = '/userController/getMenuById'
 
 
 export default {
+    REQUEST_HOME_RECIPE_LIST,
+    REQUEST_ARTICLE_RECIPE_LIST,
     GET_DISCOVER_WIKIPEDIA_LIST_API,
     GET_DISCOVER_USERINFO_LIST_API,
     GET_DISCOVER_RECIPE_LIST_API,

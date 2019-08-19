@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Loading from './pages/common/Loading/Loading'
 import TabBar from './components/tab-bar/tab-bar'
 
+
 // 组件懒加载
 // 根页面
 const Home = lazy(()=>import('./pages/home/Home/Home'));
@@ -32,9 +33,16 @@ const Message = lazy(()=>import('./pages/mine/Message/Message'))
 const PrivacyPolicy = lazy(()=>import('./pages/mine/PrivacyPolicy/PrivacyPolicy'))
 const RecipeBook = lazy(()=>import('./pages/mine/RecipeBook/RecipeBook'))
 const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
+//文章
+const ArticleRecipeDetail = lazy(()=>import('./pages/article/ArticleRecipeDetail/ArticleRecipeDetail'));
+
+
 
 //公共
 const UserInfo = lazy(()=>import('./pages/common/UserInfo/UserInfo'))
+
+
+
 
 
 const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
@@ -54,6 +62,7 @@ const AppPanel = (props)=>{
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>
+
           <Route path='/article' exact component={Article}/>
           <Route path='/mine' exact component={Mine}/>
 
@@ -63,8 +72,10 @@ const AppPanel = (props)=>{
           {/* 登录 */}
           <Route path="/login/direct" component={DirectLogin} />
           <Route path="/login/qq/confirm" component={QQConfirm} />
+          <Route path="/login/login/login" component={Login} />
           <Route path="/login/weixin/confirm" component={WeixinConfirm} />
           <Route path="/login/register" component={Register} />
+
           {/* 首页 */}
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
 
@@ -73,6 +84,8 @@ const AppPanel = (props)=>{
           <Route path="/discover/recipe/detail/:id" component={DiscoverRecipeItemDetail} />
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
 
+          {/* 文章 */}
+          <Route path="/article/recipe/detail" component={ArticleRecipeDetail} />
 
           {/* 我的 */}
           <Route path="/mine/change/psw" component={ChangePassword} />
