@@ -1,6 +1,6 @@
-.tab-bar{
+#tab-bar{
     width: 100%;
-    height: 49px;
+    height:49px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -28,7 +28,7 @@
             display: none;
         }
         &.active {
-            color: #b4282d;
+            color: #68CECE;
             .nomal{
                 display: none;
             }

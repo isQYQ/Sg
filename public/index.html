@@ -2,13 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="%PUBLIC_URL%/css/reset.css">
-    <link rel="stylesheet" href="%PUBLIC_URL%/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">s
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/reset.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/border.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/swiper.css">
     <link rel="stylesheet" href="%PUBLIC_URL%/css/iconfont.css">
   <title>Document</title>
+  <script>
+    (function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 16 * (clientWidth / 375) + 'px';
+        };
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
 </head>
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>

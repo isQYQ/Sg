@@ -5,7 +5,7 @@ import ErrorBoundary from './pages/common/ErrorBoundary/ErrorBoundary'
 import App from './App';
 import store from './store'
 import * as serviceWorker from './serviceWorker';
-
+import './style.scss'
 ReactDOM.render(
     (
         <ErrorBoundary>
@@ -13,7 +13,7 @@ ReactDOM.render(
                 <App />
             </Provider>
         </ErrorBoundary>
-    ), 
+    ),
     document.getElementById('app-root')
 );
 

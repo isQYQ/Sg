@@ -23,8 +23,9 @@ const HomeRecipeDetail = lazy(()=>import('./pages/home/HomeRecipeDetail/HomeReci
 //discover子页面
 const DiscoverRecipeItem = lazy(()=>import('./pages/discover/DiscoverRecipeItem/DiscoverRecipeItem'));
 const DiscoverRecipeItemDetail = lazy(()=>import('./pages/discover/DiscoverRecipeItemDetail/DiscoverRecipeItemDetail'));
-const DiscoverResult = lazy(()=>import('./pages/discover/DiscoverResult/DiscoverResult'));
 const DiscoverWikipediaDetail = lazy(()=>import('./pages/discover/DiscoverWikipediaDetail/DiscoverWikipediaDetail'));
+//文章
+const ArticleDetail = lazy(()=>import('./pages/article/ArticleDetail/ArticleDetail'));
 //我的
 const ChangePassword = lazy(()=>import('./pages/mine/ChangePassword/ChangePassword'))
 const ChangeUnit = lazy(()=>import('./pages/mine/ChangeUnit/ChangeUnit'))
@@ -35,7 +36,8 @@ const PrivacyPolicy = lazy(()=>import('./pages/mine/PrivacyPolicy/PrivacyPolicy'
 const RecipeBook = lazy(()=>import('./pages/mine/RecipeBook/RecipeBook'))
 const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
 
-
+//公共
+const UserInfo = lazy(()=>import('./pages/common/UserInfo/UserInfo'))
 
 
 
@@ -50,7 +52,7 @@ const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 const AppPanel = (props)=>{
   return (
     <Router>
-      <div className="app">
+      <div id="app">
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
@@ -60,10 +62,10 @@ const AppPanel = (props)=>{
           <Route path='/discover' exact component={Discover}/>
           <Route path='/article' exact component={Article}/>
           <Route path='/mine' exact component={Mine}/>
-          <Route component={NotFind}/>
-        </Switch>
 
         {/* 子页面 */}
+          {/* 公共 */}
+          <Route path="/user/info/:id" component={UserInfo} />
           {/* 登录 */}
           <Route path="/login/direct" component={DirectLogin} />
           <Route path="/login/qq/confirm" component={QQConfirm} />
@@ -72,14 +74,16 @@ const AppPanel = (props)=>{
           <Route path="/login/register" component={Register} />
       
           {/* 首页 */}
-          {/* <Route path= component={HomeRecipeDetail} /> */}
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
 
           {/* 发现页 */}
-          <Route path="/discover/recipe/item/:id" component={DiscoverRecipeItem} />
+          <Route path="/discover/recipe/item" component={DiscoverRecipeItem} />
           <Route path="/discover/recipe/detail/:id" component={DiscoverRecipeItemDetail} />
-          <Route path="/discover/result/:keywords" component={DiscoverResult} />
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
+
+          {/* 文章 */}
+          <Route path="/article/detail" component={ArticleDetail} />
+
           {/* 我的 */}
           <Route path="/mine/change/psw" component={ChangePassword} />
           <Route path="/mine/change/unit" component={ChangeUnit} />
@@ -89,9 +93,8 @@ const AppPanel = (props)=>{
           <Route path="/mine/privacy" component={PrivacyPolicy} />
           <Route path="/mine/recipe/book" component={RecipeBook} />
           <Route path="/mine/set" component={SetOption} />
-
-
-          {/* <Route component={NotFind}/> */}
+          <Route component={NotFind}/>
+          </Switch>
 
 
         {/* 导航栏 */}
