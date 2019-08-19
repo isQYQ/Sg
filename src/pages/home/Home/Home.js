@@ -21,7 +21,7 @@ class Home extends React.Component{
                         homeRecipeList.map((item,index)=>(
                             <div key={index} className="list-item" >
                             <img key={item.id} src={item.menuPic} className="pic"/>
-                            <span class="menu">{item.menuName}</span>
+                            <span className="menu">{item.menuName}</span>
                             </div>
                         ))
                     }

@@ -1,10 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import AppHeader from '../../../components/app-header/app-header'
+import AppScroll from '../../../components/app-scroll/app-scroll'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
+import './style.scss'
 
 class ArticlePage extends Component {
     render() {
         return (
-            <div>
-                <h1>文章详情页</h1>
+            <div id="articlePage">
+                <AppHeader/>
+                <AppScroll>
+                    <div className="pic1"></div>
+                </AppScroll>
+
             </div>
         );
     }
