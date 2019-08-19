@@ -1,0 +1,123 @@
+
+#qq-confirm{
+    background: #EBEDF6;
+    overflow: hidden;
+    .app-header{
+        background: #EBEDF6;
+    }
+    .iconfont{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        font-size: 20px;
+        color:#999999;
+    }
+   .center{
+    width: 348px;
+    height: 100%;
+    background:#EBEDF6;
+    margin: 0 auto;
+    .sglogo{
+        margin-top:56px;
+        height: 269px;
+        width: 348px;
+        background: url(/images/bg.png) no-repeat;
+        background-size:348px 269px ;
+        .logoimg{
+            height: 56px;
+            width: 56px;
+            margin: 0 auto;
+            img{
+            height: 56px;
+            width: 56px;
+            margin-top:90px;
+            }
+        }
+    }
+    .accountlist{
+        height: 116px;
+        width: 347px;
+        background: #fff;
+        border-radius: 0 0 5px 5px;  
+        .select{
+            display: flex;
+           align-items: center;
+            width: 326px;
+            height: 57px;
+            background: #fff;
+            float: right;
+            .bor-bottom{
+             border-color: #E4E4E4;
+            }
+            .topx{
+                height: 40px;
+                min-width: 60px;  
+                p:nth-child(1){
+                    font-weight: 600;
+                }
+                p:nth-child(2){
+                  color:#999999;
+                }
+            }
+            .imgm{
+                height: 40px;
+                width: 40px;
+                margin: 0 15px 0 177px;
+                
+                img{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                }
+            }
+            .xjt{
+                height: 9px;
+                 width: 14px;
+                img{ 
+                    height: 9px;
+                    width: 14px;
+                }
+            }   
+        }
+        .addacc{
+            height: 57px;
+            width: 326px;
+            background: #fff;
+            float: right;
+            line-height: 57px;
+            font-size: 18px;
+            color:#40A0FF;  
+        }
+    }
+    .textlist{
+        min-height: 62px;
+        width: 100%;
+        margin-top:24px;
+        p:nth-child(1){
+            font-size:14px;
+            color:#333333;
+            font-weight:bold;
+        }
+        p:nth-child(2){
+            line-height: 34px;
+            font-size:13px;
+            color:#999999;
+        }
+        p:nth-child(3){
+           font-size: 13px;
+           color:#999999;
+        }
+    }
+    .impower{
+        height: 47px;
+        width: 300px;
+        margin: 0 auto;
+        background:#00ACED ;
+        text-align: center;
+        line-height: 47px;
+        margin-top:34px;
+        color:#fff;
+        border-radius: 5px;
+
+    }
+
+   }
+
+}

@@ -1,0 +1,69 @@
+#login{
+    background:url(/images/regbg.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    .app-header{
+        background: #DEDEDD;
+    }
+    .iconfont{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        font-size: 20px;
+        color:#999999;
+    }
+    .emailcenter {
+        height: 100%;
+        width: 348px;
+        margin:0 auto;
+        .inpemail{
+           height: 47px;
+           width: 300px;
+           border-radius: 5px;
+           background: #fff;
+           margin: 0 auto;
+           margin-top:156px;
+           line-height: 47px;
+           input{
+            height: 100%;
+            width: 270px;
+            color:#C8C7C7;
+            font-size:18px;
+            margin-left:15px;
+           }
+        }
+        .inppassword{
+            height: 47px;
+            width: 300px;
+            border-radius: 5px;
+            background: #fff;
+            margin: 0 auto;
+            margin-top:15px;
+            line-height: 47px;
+            color:#C8C7C7;
+            input{
+                height:46px;
+                width: 270px;
+                color:#C8C7C7;
+                font-size:18px;
+                margin-left:15px;
+               }
+        }
+        .inpregister{
+            height: 47px;
+            width: 300px;
+            border-radius: 5px;
+            background: #68CECE;
+            margin: 0 auto;
+            margin-top:15px;
+            text-align: center;
+            line-height: 47px;
+            color:#fff;
+        }
+        .nonepass{
+            height: 14px;
+            width: 100%;
+            text-align: center;
+            margin-top:238px;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+}

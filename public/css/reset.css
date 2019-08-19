@@ -12,10 +12,11 @@ ol li{
     list-style: none;
 }
 img{
-    border:none;
+    border:none; 
 }
 input{
     border: none;
+    outline:none;
 }
 i,em{
     font-style: normal;

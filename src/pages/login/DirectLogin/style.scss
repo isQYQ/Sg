@@ -1,0 +1,108 @@
+#direct-login{
+    background:url(/images/regbg.jpg) no-repeat;
+    background-size:100% 100%;
+    overflow: hidden;
+    .directcenter{
+    width: 348px;
+    height: 100%;
+    margin:0 auto;
+    p{
+        position: absolute;
+        top:38px;
+        right:20px;
+        font-size: 14px;
+        color:#fff;
+    }
+    .logoimg{
+        height: 106px;
+        width: 115px;
+        margin: 0 auto;
+        margin-top:104px;
+        img{
+            height: 106px;
+            width: 115px;
+            border-radius: 24px;
+        }
+    }
+    .wxbtn{
+        height: 47px;
+        width: 300px;
+        background: #7BB32E;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 47px;
+        margin: 0 auto;
+        margin-top:115px;
+        span:nth-child(1){
+             height:21px;
+             width: 25px;
+             img{
+                height:21px;
+                width: 25px;
+             }
+        }
+        span:nth-child(2){
+             font-size: 16px;
+             margin-left:8px;     
+        }
+    }
+    .qqbtn{
+        height: 47px;
+        width: 300px;
+        background: #EB0C32;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 47px;
+        margin: 0 auto;
+        margin-top:15px;
+        span:nth-child(1){
+         width: 17px;
+         height: 21px;
+         img{
+            width: 17px;
+            height: 20px;    
+        }
+        }
+        span:nth-child(2){
+             font-size: 16px;
+             margin-left:8px;
+        }
+    }
+    .emaildirect{
+        height: 47px;
+        width: 300px;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 47px;
+        border:1px solid #fff;
+        margin: 0 auto;
+        margin-top:15px;
+        span:nth-child(2){
+             font-size: 16px;
+        }
+    }
+    .okaccounts{
+        height: 14px;
+        width: 172px;
+        color: #fff;
+        margin: 0 auto;
+        margin-top:23px;
+          span{
+             font-size: 14px;
+        }
+    }
+    .clause{
+        height: 14px;
+        width: 237px;
+        color: #fff;
+        margin: 0 auto;
+        margin-top:23px;
+          span{
+             font-size: 14px;
+        }
+      }
+    }
+}

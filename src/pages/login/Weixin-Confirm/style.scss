@@ -1,0 +1,158 @@
+
+#weixin-confirm{
+    background: #fff;
+    overflow: hidden;
+    .app-header{
+        background: fff;
+    }
+    .textnone{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        font-size: 20px;
+        color:#333;
+    }
+   .center{
+    width: 348px;
+    height: 100%;
+    background:#fff;
+    margin: 0 auto;
+    .sglogo{
+        margin-top:85px;
+        width: 348px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color:#333333;
+        .logoimg{
+            height: 24px;
+            width: 24px;
+            margin-right:11px;
+            img{
+            height: 24px;
+            width: 24px;
+            }
+        }
+    }
+    .minexx{
+        height: 46px;
+        width: 307px;
+        margin-bottom:54px;
+        margin-top:19px;
+        
+        p{
+            font-size: 22px;
+            color:#333333;
+        }
+    }
+    .accountlist{
+        height: 145px;
+        width: 347px;
+        background: #fff;
+        .select{
+            display: flex;
+           align-items: center;
+            width: 347px;
+            height: 57px;
+            background: #fff;
+            border-bottom:1px solid #E4E4E4;
+            .topx{
+                min-height: 40px;
+                min-width: 60px;  
+                line-height: 24px;
+                margin: 0 143px 0 11px;
+                p:nth-child(1){
+                    font-weight: 600;
+                }
+                p:nth-child(2){
+                  color:#999999;
+                }
+            }         
+            .imgm{
+                height: 40px;
+                width: 40px;
+                img{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            .xjt{
+                height: 9px;
+                 width: 14px;
+                img{ 
+                    height: 9px;
+                    width: 14px;
+                }
+            }   
+        }
+        .toptext{
+            width: 347px;
+            height: 28px;
+            font-size:14px;
+            color:#999999;
+            border-bottom:1px solid #E4E4E4;
+        }
+        .addacc{
+            height: 57px;
+            width: 347px;
+            background: #fff;
+            line-height: 57px;
+            font-size: 18px; 
+            display: flex;
+            align-items: center;
+            border-bottom:1px solid #E4E4E4;
+            span:nth-child(1){
+                display: inline-block;
+                display: flex;
+                align-items: center;
+                height: 14px;
+                width: 14px;
+                border:1px dotted #999999;
+                margin:0 26px 0 12px;
+                img{
+                height: 14px;
+                width: 14px;
+                }
+            }
+        }
+    }
+    .textlist{
+        min-height: 62px;
+        width: 100%;
+        margin-top:24px;
+        p:nth-child(1){
+            font-size:14px;
+            color:#333333;
+            font-weight:bold;
+        }
+        p:nth-child(2){
+            line-height: 34px;
+            font-size:13px;
+            color:#999999;
+        }
+        p:nth-child(3){
+           font-size: 13px;
+           color:#999999;
+        }
+    }
+    .agreed{
+        height: 40px;
+        width: 184px;
+        margin: 0 auto;
+        background:#05C160 ;
+        text-align: center;
+        line-height: 40px;
+        margin-top:75px;
+        color:#fff;
+        border-radius: 5px;
+    }
+    .turn{
+        height: 40px;
+        width: 184px;
+        margin: 0 auto;
+        background:#EDEDED;
+        text-align: center;
+        line-height: 40px;
+        margin-top:16px;
+        color:#05C160;
+        border-radius: 5px;
+    }
+   }
+}

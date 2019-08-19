@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import Loading from './pages/common/Loading/Loading'
 import TabBar from './components/tab-bar/tab-bar'
 
+
 // 组件懒加载
 // 根页面
 const Home = lazy(()=>import('./pages/home/Home/Home'));
@@ -37,6 +38,9 @@ const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
 
 
 
+
+
+
 const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 
 
@@ -63,8 +67,10 @@ const AppPanel = (props)=>{
           {/* 登录 */}
           <Route path="/login/direct" component={DirectLogin} />
           <Route path="/login/qq/confirm" component={QQConfirm} />
+          <Route path="/login/login/login" component={Login} />
           <Route path="/login/weixin/confirm" component={WeixinConfirm} />
           <Route path="/login/register" component={Register} />
+      
           {/* 首页 */}
           {/* <Route path= component={HomeRecipeDetail} /> */}
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
