@@ -33,6 +33,10 @@ const Message = lazy(()=>import('./pages/mine/Message/Message'))
 const PrivacyPolicy = lazy(()=>import('./pages/mine/PrivacyPolicy/PrivacyPolicy'))
 const RecipeBook = lazy(()=>import('./pages/mine/RecipeBook/RecipeBook'))
 const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
+//文章
+const ArticleRecipeDetail = lazy(()=>import('./pages/article/ArticleRecipeDetail/ArticleRecipeDetail'));
+
+
 
 
 
@@ -54,10 +58,9 @@ const AppPanel = (props)=>{
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>
+   
           <Route path='/article' exact component={Article}/>
           <Route path='/mine' exact component={Mine}/>
-          <Route component={NotFind}/>
-        </Switch>
 
         {/* 子页面 */}
           {/* 登录 */}
@@ -83,10 +86,13 @@ const AppPanel = (props)=>{
           <Route path="/mine/privacy" component={PrivacyPolicy} />
           <Route path="/mine/recipe/book" component={RecipeBook} />
           <Route path="/mine/set" component={SetOption} />
+          {/* {文章} */}
+          <Route path="/article/recipe/detail" component={ArticleRecipeDetail}/>
 
 
           {/* <Route component={NotFind}/> */}
-
+          <Route component={NotFind}/>
+        </Switch>
 
         {/* 导航栏 */}
         <TabBar />

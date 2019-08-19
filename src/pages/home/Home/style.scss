@@ -1,3 +1,25 @@
 #home{
-    background: lightblue;
+    background: #fff;
+    .content{
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+    }
+    .list-item{
+        position:relative;
+    .pic{
+    width:375px;
+    height:175px;
+    object-fit: cover;
+    }
+    .menu{
+        position:absolute;
+        bottom:60px;
+        left:20px;
+        font-size:16px;
+        color:#FFFFFF;
+    }
+}
+
 }
