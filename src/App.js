@@ -23,8 +23,6 @@ const HomeRecipeDetail = lazy(()=>import('./pages/home/HomeRecipeDetail/HomeReci
 const DiscoverRecipeItem = lazy(()=>import('./pages/discover/DiscoverRecipeItem/DiscoverRecipeItem'));
 const DiscoverRecipeItemDetail = lazy(()=>import('./pages/discover/DiscoverRecipeItemDetail/DiscoverRecipeItemDetail'));
 const DiscoverWikipediaDetail = lazy(()=>import('./pages/discover/DiscoverWikipediaDetail/DiscoverWikipediaDetail'));
-//文章
-const ArticleDetail = lazy(()=>import('./pages/article/ArticleDetail/ArticleDetail'));
 //我的
 const ChangePassword = lazy(()=>import('./pages/mine/ChangePassword/ChangePassword'))
 const ChangeUnit = lazy(()=>import('./pages/mine/ChangeUnit/ChangeUnit'))
@@ -75,8 +73,6 @@ const AppPanel = (props)=>{
           <Route path="/discover/recipe/detail/:id" component={DiscoverRecipeItemDetail} />
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
 
-          {/* 文章 */}
-          <Route path="/article/detail" component={ArticleDetail} />
 
           {/* 我的 */}
           <Route path="/mine/change/psw" component={ChangePassword} />

@@ -69,7 +69,6 @@ export const requestFocusNumber = (id)=> async(dispatch)=>{
     let {data} = await get(api.GET_FOCUS_NUMBER_API,{
         id
     });
-    console.log(data);
     dispatch(setFocusNumberAction(data))
 }
 //请求用户收藏的菜谱
@@ -77,7 +76,6 @@ export const requestUserLikeRecipeList = (id)=> async(dispatch)=>{
     let {data} = await get(api.GET_USER_LIKE_RECIPE_API,{
         id
     })
-    console.log(data);
     dispatch(setUserLikeRecipeListAction(data))
 
 }
