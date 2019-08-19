@@ -3,6 +3,11 @@
     .search{
         position: relative;
         height: 44px;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
         span{
             position: absolute;
             left: 32px;
@@ -11,8 +16,34 @@
             font-size: 18px;
             color: #333;
         }
+        .am-notice-bar{
+          position: absolute;
+          top: 33px;
+          left: 26px;
+          background-color: #fefcec;
+          height: 26px;
+          overflow: hidden;
+          font-size: 12px;
+          line-height: 36px;
+          color: #f76a24;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          width: 270px;
+          line-height: 16px;
+          height: 16px;
+          .am-icon{
+            width: 28px;
+            position: fixed;
+            height: 28px;
+            top: 32px;
+            right: 78px;
+            z-index: 2;
+          }
+        }
         .search-input{
-            width:320px;
+            width:270px;
             height:30px;
             background:#68CECE;
             opacity:0.3;
@@ -22,10 +53,19 @@
             text-indent: 28px;
             line-height: 38px;
             outline: none;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
+        }
+        .btn{
+          width: 60px;
+          height: 30px;
+          background: #68CECE;
+          border: none;
+          border-radius: 5px;
+          span{
+            color: #fff;
+            position: static !important;
+            font-size: 14px;
+
+          }
         }
     }
     .nav{
@@ -72,18 +112,6 @@
             width: 100%;
             transform: scale(1.2)
           }
-          .mask{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1;
-            background: linear-gradient(
-              rgba(0,0,0,0),
-              rgba(0,0,0,0.4)
-            )
-          }
         }
       }
     }
@@ -99,6 +127,7 @@
       .scroll-content{
         padding: 20px;
         .wikepedia-item{
+          display: block;
           position: relative;
           text-align: center;
           margin-bottom: 20px;

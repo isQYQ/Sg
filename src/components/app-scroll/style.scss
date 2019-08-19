@@ -1,3 +1,6 @@
 .scroll-wrap{
     overflow: hidden;
+    .scroll-content{
+        min-height: 580px;
+    }
 }

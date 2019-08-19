@@ -22,7 +22,6 @@ const HomeRecipeDetail = lazy(()=>import('./pages/home/HomeRecipeDetail/HomeReci
 //discover子页面
 const DiscoverRecipeItem = lazy(()=>import('./pages/discover/DiscoverRecipeItem/DiscoverRecipeItem'));
 const DiscoverRecipeItemDetail = lazy(()=>import('./pages/discover/DiscoverRecipeItemDetail/DiscoverRecipeItemDetail'));
-const DiscoverResult = lazy(()=>import('./pages/discover/DiscoverResult/DiscoverResult'));
 const DiscoverWikipediaDetail = lazy(()=>import('./pages/discover/DiscoverWikipediaDetail/DiscoverWikipediaDetail'));
 //文章
 const ArticleDetail = lazy(()=>import('./pages/article/ArticleDetail/ArticleDetail'));
@@ -36,7 +35,8 @@ const PrivacyPolicy = lazy(()=>import('./pages/mine/PrivacyPolicy/PrivacyPolicy'
 const RecipeBook = lazy(()=>import('./pages/mine/RecipeBook/RecipeBook'))
 const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
 
-
+//公共
+const UserInfo = lazy(()=>import('./pages/common/UserInfo/UserInfo'))
 
 
 const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
@@ -60,6 +60,8 @@ const AppPanel = (props)=>{
           <Route path='/mine' exact component={Mine}/>
 
         {/* 子页面 */}
+          {/* 公共 */}
+          <Route path="/user/info/:id" component={UserInfo} />
           {/* 登录 */}
           <Route path="/login/direct" component={DirectLogin} />
           <Route path="/login/qq/confirm" component={QQConfirm} />
@@ -69,9 +71,8 @@ const AppPanel = (props)=>{
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
 
           {/* 发现页 */}
-          <Route path="/discover/recipe/item/:id" component={DiscoverRecipeItem} />
+          <Route path="/discover/recipe/item" component={DiscoverRecipeItem} />
           <Route path="/discover/recipe/detail/:id" component={DiscoverRecipeItemDetail} />
-          <Route path="/discover/result/:keywords" component={DiscoverResult} />
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
 
           {/* 文章 */}

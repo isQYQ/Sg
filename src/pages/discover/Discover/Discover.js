@@ -20,10 +20,12 @@ const Discover = (props)=>{
             props.requestRecipeList();
             return;
         }
-    ,[])
+    ,[props.searchData])
     return (
         <div className="page" id="discover">
-            <Search/>
+            <Search {...props} data={props.userInfoList} info={
+                selectIndex === 0 ? '请输入食材名' : (selectIndex === 1 ? '请输入国家名' : '请输入用户名')
+            }/>
             <nav className="nav">
                 {
                     navList.map((item,index)=>(
@@ -39,7 +41,7 @@ const Discover = (props)=>{
             </nav>
 
                 {
-                    selectIndex === 0 ? <Recipe data={props.recipeList}/> : (selectIndex === 1 ? <Wikipe data={props.wikipdiaList}/> :<User data={props.userInfoList}/>)
+                    selectIndex === 0 ? <Recipe data={props.recipeList} {...props}/> : (selectIndex === 1 ? <Wikipe data={props.wikipdiaList}/> :<User data={props.userInfoList} searchData={props.searchData} {...props}/>)
                 }
 
         </div>
@@ -49,7 +51,8 @@ const Discover = (props)=>{
 const mapStateToProps = (state)=>({
     recipeList : state.discover.recipeList,
     wikipdiaList : state.discover.wikipediaListData,
-    userInfoList : state.discover.userInfo
+    userInfoList : state.discover.userInfo,
+    searchData : state.discover.searchUserInfo
 })
 
 const mapDispatchToProps = (dispatch)=>({
