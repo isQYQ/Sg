@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import './style.scss'
+import AppHeader from '../../../components/app-header/app-header'
+import AppScroll from '../../../components/app-scroll/app-scroll'
+
 class HomeRecipeDetail extends Component {
     render() {
         return (
             <div className="page subpage" id="recipe-detail">
-                <h1>首页菜单详情页</h1>
+                <AppHeader title="详情"/>
+                <AppScroll className="content">
+                </AppScroll>
             </div>
         );
     }

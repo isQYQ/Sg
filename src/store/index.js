@@ -6,14 +6,14 @@ import home from './modules/home'
 import discover from './modules/discover'
 import article from './modules/article'
 import mine from './modules/mine'
-
+import user from './modules/user'
 // 合并多个reducer
 const reducer = combineReducers({
     login,
     home,
     discover,
     article,
-    mine
+    mine,user
 });
 
 // 使用redux开发者工具
