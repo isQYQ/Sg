@@ -13,6 +13,12 @@ class Mine extends Component {
     render() {
         let { email, password } = this.state
         let {sendAction} = this.props
+        let picList = [
+            {id: 1, picUrl: '/images/my_photo1.png', name: '彩虹沙拉'},
+            {id: 2, picUrl: '/images/my_photo2.png', name: '口水鸡'},
+            {id: 3, picUrl: '/images/my_photo3.png', name: '卤水拼盘'},
+            {id: 4, picUrl: '/images/my_photo4.png', name: '越南春卷'},
+        ]
         return (
             <div className='page' id='mine'>
                 <AppHeader title='我的' 
@@ -23,8 +29,8 @@ class Mine extends Component {
                 />
                 <div className="content">
                     <div className="info">
-                        <span><img src="" alt=""/></span>
-                        <span>用户id</span>
+                        <span><img src="/images/pic.png" alt=""/></span>
+                        <span>傻蛋</span>
                         <span>粉丝 | 关注</span>
                         <span>这个人懒死了，什么都不想写！</span>
                         <span className='btn'
@@ -41,18 +47,22 @@ class Mine extends Component {
                             >文章</span>
                         </div>
                         <div className='contentAll'>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
+                           {
+                               picList.map(item=>(
+                                   <span key={item.id} className='item'>
+                                       <img src={item.picUrl} alt=""/>
+                                       <span className='name'>{item.name}</span>
+                                    </span>
+                               ))
+                           }
                         </div>  
                     </div>
 
 
 
-                    <div>账号：<input type='text' value={email} onChange={this.emailChangeAction}/></div>
+                    {/* <div>账号：<input type='text' value={email} onChange={this.emailChangeAction}/></div>
                     <div>密码：<input type='text' value={password} onChange={this.pswChangeAction}/></div>
-                    <div onClick={()=>sendAction(email,password)}>登录</div>
+                    <div onClick={()=>sendAction(email,password)}>登录</div> */}
                 </div>
             </div>
         );
