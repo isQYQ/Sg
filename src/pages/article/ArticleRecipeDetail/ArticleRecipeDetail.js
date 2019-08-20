@@ -16,7 +16,7 @@ class ArticlePage extends Component {
                         <p>蔬菜藏着吃</p>
                         </div>
                     </div>
-                    <div class="line"></div>
+                    <div className="line"></div>
                     <p className="page1">经过2019全民营养周的宣传，「天天蔬果、健康你我」的理念深入人心。<br/>
                         但是，实际上很多家庭吃蔬菜的量总是不如人意，觉得吃到每天500克难度太大。<br/>
                         说起来理由很多，
