@@ -1,6 +1,15 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import AppScroll from '../../../../components/app-scroll/app-scroll'
+import {setSearchUserInfoAction} from '../../../../store/modules/discover'
+import {connect} from 'react-redux'
 const User = (props)=>{
+    useEffect(()=>{
+        props.requestSearchUserInfoList([])
+        return ()=>{
+            //清空serchData
+            props.requestSearchUserInfoList([]);
+        }
+    },[])
     let {data,searchData} = props;
     const toUserInfo = (id)=>{
         console.log(1)
@@ -39,4 +48,13 @@ const User = (props)=>{
     )
 }
 
-export default User;
+const mapStateToProps = (state)=>({
+    searchData : state.discover.searchUserInfo
+})
+const mapDispatchToProps = (dispatch)=>({
+    requestSearchUserInfoList(data){
+        dispatch(setSearchUserInfoAction(data));
+    }
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(User);

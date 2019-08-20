@@ -111,7 +111,7 @@ const AppPanel = (props)=>{
 const App = (props)=>{
   return (
     <Suspense fallback={<Loading/>}>
-      {props.isLogin ? <AppPanel /> : <Login />}
+      {props.isLogin ? <AppPanel /> : <Login/>}
     </Suspense>
   );
 }

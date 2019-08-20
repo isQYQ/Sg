@@ -9,7 +9,6 @@ import './style.scss'
 class Article extends React.Component {
     render() {
         let {articleRequestList}=this.props;
-        console.log(this.props)
         return (
             <Link className="page" id="article" to="article/recipe/detail">
                 <AppHeader title="文章" />
@@ -17,7 +16,7 @@ class Article extends React.Component {
                 {
                     articleRequestList.map((item,index)=>(
                         <div key={index} className="list-item" to="article/recipe/detail">
-                            <img src={item.articleFirstPic} className="pic"/>
+                            <img src={item.articleFirstPic} className="pic" alt=""/>
                             <div className="mask">
                                 <div className="container">
                                     <span className="title">文章</span>
@@ -32,7 +31,6 @@ class Article extends React.Component {
         )
     }
     componentDidMount(){
-        console.log(this.props)
         this.props.fun();
     }
 }

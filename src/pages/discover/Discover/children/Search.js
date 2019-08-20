@@ -13,7 +13,7 @@ const Search = (props)=>{
             return item.name === value
         })
         {userInfo ? requestSearchUserInfoList(userInfo.id) : setShow(!show)}
-        }
+    }
     return (
         <div className="search demo">
             <span className="iconfont icon-search"></span>

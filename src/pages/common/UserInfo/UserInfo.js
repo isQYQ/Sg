@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import {requestSearchUserInfoList} from '../../../store/modules/discover'
 import AppScroll from '../../../components/app-scroll/app-scroll'
+import AppHeader from '../../../components/app-header/app-header'
 import {requestFanNumber,requestFocusNumber,requestUserLikeRecipeList} from '../../../store/modules/user'
 import {connect} from 'react-redux'
 import './style.scss'
@@ -16,10 +17,16 @@ const UserInfo = (props)=>{
         props.requestFocusNumber(id);
         props.requestUserLikeRecipeList(id);
     },[])
+    const goBack = ()=>{
+        props.history.goBack();
+        console.log(props)
+    }
     let {userInfo,fansNum,focusNum,recipeList} = props;
     return (
         <div className="page subpage" id="user-info">
-            <p className="header">用户信息</p>
+            <AppHeader className="header" title="用户信息" left={
+                <span className="iconfont icon-back"></span>
+            } leftClick={goBack}/>
             <div className="content">
                 <div className="pic"><img src={userInfo.pic} alt=""/></div>
                 <p className="name">{userInfo.name}</p>

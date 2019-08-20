@@ -17,6 +17,8 @@ const GET_FOCUS_NUMBER_API = '/userController/getIdolCountById'
 //用户收藏菜谱的接口
 const GET_USER_LIKE_RECIPE_API = '/userController/getMenuById'
 
+//菜单详情列表,根据id获取
+const GET_RECIPE_DETAIL_BY_ID = '/userController/getMenuById?id=1'
 
 export default {
     REQUEST_HOME_RECIPE_LIST,
@@ -28,5 +30,6 @@ export default {
     GET_SEARCH_USER_INFO_API,
     GET_FANS_NUMBER_API,
     GET_FOCUS_NUMBER_API,
-    GET_USER_LIKE_RECIPE_API
+    GET_USER_LIKE_RECIPE_API,
+    GET_RECIPE_DETAIL_BY_ID
 }

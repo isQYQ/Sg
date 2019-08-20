@@ -1,9 +1,98 @@
 #recipe-item-detail{
+    background: #fff;
     .iconfont{
         font-size: 30px;
         color: #999999;
     }
     .icon-kLike{
         margin-right: 12px;
+    }
+    .recipe-detail-scroll{
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+        .pic{
+            width: 100%;
+            height: 554px;
+        }
+        .mask{
+            height: 554px;
+            color: #fff;
+            padding-left: 21px;
+            .name{
+                font-size: 24px;
+                margin: 456px 0 0 0;
+            }
+            span{
+                line-height: 32px;
+                font-size: 14px;
+            }
+            .iconfont{
+                position: relative;
+                top: 4px;
+                padding-right: 10px;
+                color: #68CECE;
+                font-size: 28px;
+            }
+        }
+        .collect{
+            display: flex;
+            height: 49px;
+            align-items: center;
+            padding: 0 70px;
+            justify-content: space-between;
+            .iconfont{
+                font-size: 26px;
+                padding-right: 6px;
+                position: relative;
+                top: 3px;
+                color: #68CECE;
+            }
+            .icon-like{
+                font-size: 24px;
+            }
+        }
+        .author{
+            // padding: 0 50px;
+            width: 300px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            overflow: hidden;
+            .pic{
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                background:pink;
+                margin:25px auto 10px;
+            }
+            .name{
+                text-align: center;
+            }
+            .desc{
+                display: block;
+                font-size: 10px;
+                padding: 25px 0;
+            }
+            .goods{
+                font-size: 10px;
+                color: #666;
+                line-height: 20px;
+                padding-top: 15px;
+            }
+            .progress{
+                margin-top: 20px;
+                width: 100%;
+                overflow: hidden;
+                span{
+
+                    font-size: 10px;
+                }
+            }
+            img{
+                margin-top: 15px;
+            }
+        }
     }
 }

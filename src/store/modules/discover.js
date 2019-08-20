@@ -77,7 +77,7 @@ const setUserInfoListAction = (value)=>({
     value
 })
 //设置搜索出来的用户信息
-const setSearchUserInfoAction = (value)=>({
+export const setSearchUserInfoAction = (value)=>({
     type:SET_SEARCHINFO_LIST,
     value
 })

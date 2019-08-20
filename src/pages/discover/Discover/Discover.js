@@ -13,14 +13,18 @@ const navList = [
 ]
 const Discover = (props)=>{
     let [selectIndex,setSelectIndex] = useState(0);
+    let index = parseInt(localStorage.getItem("index"));
     useEffect(
         ()=>{
+            setSelectIndex(index)
             props.requestWikipediaList();
             props.requestUserInfoList();
             props.requestRecipeList();
-            return;
+            return ()=>{
+                console.log(selectIndex)
+            }
         }
-    ,[props.searchData])
+        ,[props.requestWikipediaList,props.requestUserInfoList,props.requestRecipeLis])
     return (
         <div className="page" id="discover">
             <Search {...props} data={props.userInfoList} info={
@@ -34,6 +38,7 @@ const Discover = (props)=>{
                             key={item.id}
                             onClick={()=>{
                                 setSelectIndex(index)
+                                localStorage.setItem("index", index);
                             }}
                         >{item.value}</li>
                     ))
@@ -43,11 +48,9 @@ const Discover = (props)=>{
                 {
                     selectIndex === 0 ? <Recipe data={props.recipeList} {...props}/> : (selectIndex === 1 ? <Wikipe data={props.wikipdiaList}/> :<User data={props.userInfoList} searchData={props.searchData} {...props}/>)
                 }
-
         </div>
     )
 }
-
 const mapStateToProps = (state)=>({
     recipeList : state.discover.recipeList,
     wikipdiaList : state.discover.wikipediaListData,

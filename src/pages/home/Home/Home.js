@@ -11,28 +11,29 @@ import './style.scss'
 class Home extends React.Component{
     render(){
         let {homeRecipeList} = this.props;
-        console.log(this.props)
         return (
-            <Link className="page" id="home" to="home/recipe/detail/:id">
+            <div className="page" id="home">
                 <AppHeader title="食光"/>
-            
+
                 <AppScroll className="content">
                     {
                         homeRecipeList.map((item,index)=>(
-                            <div key={index} className="list-item" >
+                            <div key={index} className="list-item" onClick={()=>this.toDetail(item.id)}>
                             <img key={item.id} src={item.menuPic} className="pic"/>
                             <span className="menu">{item.menuName}</span>
                             </div>
                         ))
                     }
 
-                </AppScroll> 
-            </Link>
+                </AppScroll>
+            </div>
         )
     }
     componentDidMount(){
-        console.log(this.props)
         this.props.fun();
+    }
+    toDetail(id){
+        this.props.history.push(`/discover/recipe/detail/${id}`)
     }
 
 }
