@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import AppHeader from '../../../components/app-header/app-header'
+
 import './style.scss'
 class QQConfirm extends Component {
     render() {

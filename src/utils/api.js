@@ -18,6 +18,11 @@ const GET_DISCOVER_USERINFO_LIST_API = '/userController/getUserList?id=1'
 const GET_DISCOVER_RECIPE_ITEM_LIST_API = '/menuController/getMenuByHostType'
 const GET_SEARCH_USER_INFO_API = '/userController/getUserById'
 
+//login 用户登录
+const GET_DIRECT_NAME ='/userController/login'
+//用户注册接口
+const GET_DIRECT_EMAIL='/userController/register'
+
 //user
 //粉丝接口
 const GET_FANS_NUMBER_API = '/userController/getFansCountById'
@@ -43,5 +48,7 @@ export default {
     GET_FANS_NUMBER_API,
     GET_FOCUS_NUMBER_API,
     GET_USER_LIKE_RECIPE_API,
-    GET_RECIPE_DETAIL_BY_ID
+    GET_RECIPE_DETAIL_BY_ID,
+    GET_DIRECT_NAME,
+    GET_DIRECT_EMAIL
 }

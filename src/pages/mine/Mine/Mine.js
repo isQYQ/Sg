@@ -15,7 +15,7 @@ class Mine extends Component {
         let { email, password } = this.state
         let {sendAction} = this.props
         let picList = [
-            {id: 1, picUrl: '/images/my_photo1.png', name: '彩虹沙拉'},
+            {id: 1, picUrl: '/images/my_photo1.png', name: '酸菜鱼'},
             {id: 2, picUrl: '/images/my_photo2.png', name: '口水鸡'},
             {id: 3, picUrl: '/images/my_photo3.png', name: '卤水拼盘'},
             {id: 4, picUrl: '/images/my_photo4.png', name: '越南春卷'},
@@ -50,7 +50,7 @@ class Mine extends Component {
                         <div className='contentAll'>
                            {
                                picList.map(item=>(
-                                   <span key={item.id} className='item'>
+                                   <span key={item.id} className='item' onClick={()=>this.toDetail(item.id)}>
                                        <img src={item.picUrl} alt=""/>
                                        <span className='name'>{item.name}</span>
                                     </span>
@@ -75,10 +75,9 @@ class Mine extends Component {
         this.props.sendAction(email,psw);
         this.props.history.push('/home')
     }
-    // componentDidUpdate(){
-    //     console.log(document.cookie)
-
-    // }
+    toDetail(id){
+        this.props.history.push(`/discover/recipe/detail/${id}`)
+    }
 }
 const mapStateToProps = (state)=>({
 

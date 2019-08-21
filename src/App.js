@@ -53,12 +53,12 @@ const NotFind = lazy(()=>import('./pages/common/NotFind/NotFind'));
 
 const AppPanel = (props)=>{
   return (
-    <Router>
+     <Router>
       <div id="app">
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
-            return <Redirect to="/mine"/>
+            return <Redirect to="/login/direct"/>
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>
@@ -70,11 +70,11 @@ const AppPanel = (props)=>{
           {/* 公共 */}
           <Route path="/user/info/:id" component={UserInfo} />
           {/* 登录 */}
-          <Route path="/login/direct" component={DirectLogin} />
+          <Route path="/login/register" component={Register} />
           <Route path="/login/qq/confirm" component={QQConfirm} />
           <Route path="/login/login/login" component={Login} />
           <Route path="/login/weixin/confirm" component={WeixinConfirm} />
-          <Route path="/login/register" component={Register} />
+          <Route path="/login/direct" component={DirectLogin} />
 
           {/* 首页 */}
           <Route path="/home/recipe/detail/:id" component={HomeRecipeDetail} />
@@ -104,7 +104,7 @@ const AppPanel = (props)=>{
         <TabBar />
 
       </div>
-    </Router>
+     </Router>
   )
 }
 

@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import './style.scss'
 class Pop extends Component {
     render() {
-      console.log( this.props.id)
+        console.log(this.props)
         return (
             <div id="pop">
                 <div className="popup"
                 style={this.props.sty}>
                     <div className="hint"  style={this.props.heig}>
                         <div className="text">
-                        <p>{this.props.val}</p> 
+                        <p>{this.props.val}</p>
                         {this.props.p}
-                        </div> 
+                        </div>
                     </div>
                      <div className="noyes">
                          <span className="no" onClick={()=>this.handeldelet()}>
@@ -24,11 +24,12 @@ class Pop extends Component {
                 </div>
             </div>
         );
-    } 
+    }
     idfun(){
         switch( this.props.id){
             case 1:
-                return this.props.pos.history.push("/login/weixin/confirm")
+                // return this.props.pos.history.push("/login/weixin/confirm") ;
+                window.location.href()
             case 2:
                 return this.props.pos.history.push("/login/qq/confirm")
             case 3:
