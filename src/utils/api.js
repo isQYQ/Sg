@@ -1,3 +1,12 @@
+//登录接口
+const LOGIN_API = '/userController/login'
+
+//登陆后对应账号收藏菜谱接口
+const LOGIN_MENU_API = '/userController/getMenuById'
+
+//登录后对应账号收藏文章接口
+const LOGIN_ARTICLE_API = '/userController/getArticleById'
+
 //home
 const REQUEST_HOME_RECIPE_LIST = '/menuController/getAllMenu'
 const REQUEST_ARTICLE_RECIPE_LIST = '/articlecontroller/list'
@@ -21,6 +30,9 @@ const GET_USER_LIKE_RECIPE_API = '/userController/getMenuById'
 const GET_RECIPE_DETAIL_BY_ID = '/userController/getMenuById?id=1'
 
 export default {
+     LOGIN_API,
+    LOGIN_MENU_API,
+    LOGIN_ARTICLE_API,
     REQUEST_HOME_RECIPE_LIST,
     REQUEST_ARTICLE_RECIPE_LIST,
     GET_DISCOVER_WIKIPEDIA_LIST_API,
