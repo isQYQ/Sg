@@ -28,8 +28,7 @@ class Pop extends Component {
     idfun(){
         switch( this.props.id){
             case 1:
-                // return this.props.pos.history.push("/login/weixin/confirm") ;
-                window.location.href()
+                return this.props.pos.history.push("/login/weixin/confirm") ;
             case 2:
                 return this.props.pos.history.push("/login/qq/confirm")
             case 3:
