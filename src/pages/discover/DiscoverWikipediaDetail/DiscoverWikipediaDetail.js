@@ -6,7 +6,14 @@ class DiscoverWikipediaDetail extends Component {
     render() {
         return (
             <div className="page subpage" id="wikipedia-detail">
-                <AppHeader/>
+                <AppHeader left={
+                    <span className="iconfont icon-thinBack"></span>
+                } right={
+                    <div>
+                        <span className="iconfont icon-kLike"></span>
+                        <span className="iconfont icon-transmit"></span>
+                    </div>
+                } leftClick={()=>this.props.history.goBack()}/>
                 <AppScroll className="content">
                     <div className="pic1">
                         <span className="word">百科</span>

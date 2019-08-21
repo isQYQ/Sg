@@ -7,7 +7,14 @@ class ArticlePage extends Component {
     render() {
         return (
             <div classsName="page" id="articlePage">
-                <AppHeader/>
+                <AppHeader left={
+                    <span className="iconfont icon-thinBack"></span>
+                } right={
+                    <div>
+                        <span className="iconfont icon-kLike"></span>
+                        <span className="iconfont icon-transmit"></span>
+                    </div>
+                } leftClick={()=>this.props.history.goBack()}/>
                 <AppScroll className="content">
                     <div className="pic1">
                         <span className="word">文章</span>

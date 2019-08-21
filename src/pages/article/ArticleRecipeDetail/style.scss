@@ -1,5 +1,12 @@
 #articlePage{
     background:pink;
+    .iconfont{
+        font-size: 30px;
+        color: #999999;
+    }
+    .icon-kLike{
+        margin-right: 12px;
+    }
     .content{
         position: absolute;
         top: 44px;
@@ -39,7 +46,7 @@
             margin-top: -30px;
         }
         .pic2{
-            background:url("images/article\ e_photo2.png") no-repeat;    
+            background:url("images/article\ e_photo2.png") no-repeat;
             width:265px;
             height:150px;
             margin-left:50px;
@@ -68,7 +75,7 @@
             margin-top: -50px;
         }
         .pic3{
-            background:url("images/article e_photo3.png") no-repeat;    
+            background:url("images/article e_photo3.png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -90,7 +97,7 @@
             line-height:18px;
         }
         .pic4{
-            background:url("images/article e_photo4.png") no-repeat;    
+            background:url("images/article e_photo4.png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -112,7 +119,7 @@
             line-height:18px;
         }
         .pic5{
-            background:url("images/article e_photo5.png") no-repeat;    
+            background:url("images/article e_photo5.png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -122,6 +129,6 @@
             border-bottom:1px solid #E2E2E2;
             margin-top:49px;
         }
-        
+
     }
 }

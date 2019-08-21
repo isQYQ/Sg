@@ -31,6 +31,7 @@ class Home extends React.Component{
     }
     componentDidMount(){
         this.props.fun();
+        console.log(document.cookie)
     }
     toDetail(id){
         this.props.history.push(`/discover/recipe/detail/${id}`)

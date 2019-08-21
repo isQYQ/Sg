@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import AppHeader from '../../../components/app-header/app-header';
+import AppScroll from '../../../components/app-scroll/app-scroll';
 import './style.scss';
 import {connect} from 'react-redux'
 import {requestLoginAction} from '../../../store/modules/mine'
@@ -21,13 +22,13 @@ class Mine extends Component {
         ]
         return (
             <div className='page' id='mine'>
-                <AppHeader title='我的' 
+                <AppHeader title='我的'
                     left={<span className="iconfont icon-message"></span>}
                     right={<span className='iconfont icon-set'></span>}
                     leftClick={()=>{this.props.history.push('/mine/message')}}
                     rightClick={()=>{this.props.history.push('/mine/set')}}
                 />
-                <div className="content">
+                <AppScroll className="content">
                     <div className="info">
                         <span><img src="/images/pic.png" alt=""/></span>
                         <span>傻蛋</span>
@@ -39,10 +40,10 @@ class Mine extends Component {
                     </div>
                     <div className="menuAndArticle">
                         <div className='title'>
-                            <span className={(this.state.showMenu === 'menu') ? 'active' : ''} 
+                            <span className={(this.state.showMenu === 'menu') ? 'active' : ''}
                                 onClick={()=>{this.setState({showMenu:'menu',showArticle:''})}}
                             >菜谱书</span>
-                            <span className={(this.state.showArticle === 'art' ? 'active' : '')} 
+                            <span className={(this.state.showArticle === 'art' ? 'active' : '')}
                                 onClick={()=>{this.setState({showArticle:'art',showMenu:''});}}
                             >文章</span>
                         </div>
@@ -55,27 +56,28 @@ class Mine extends Component {
                                     </span>
                                ))
                            }
-                        </div>  
+                        </div>
                     </div>
-
-
-
                     {/* <div>账号：<input type='text' value={email} onChange={this.emailChangeAction}/></div>
                     <div>密码：<input type='text' value={password} onChange={this.pswChangeAction}/></div>
-                    <div onClick={()=>sendAction(email,password)}>登录</div> */}
-                </div>
+                    <div onClick={()=>this.sendAction(email,password)}>登录</div> */}
+                </AppScroll>
             </div>
         );
     }
     emailChangeAction = (ev)=>{
         this.setState({email:ev.target.value})
-    }  
+    }
     pswChangeAction = (ev)=>{
         this.setState({password:ev.target.value})
     }
+    sendAction(email,psw){
+        this.props.sendAction(email,psw);
+        this.props.history.push('/home')
+    }
     // componentDidUpdate(){
     //     console.log(document.cookie)
-    
+
     // }
 }
 const mapStateToProps = (state)=>({
@@ -85,9 +87,10 @@ const mapDispatchToProps = (dispatch)=>({
     sendAction(email,password){
         let action = requestLoginAction(email,password);
         dispatch(action);
-        
+        // window.location.reload();
+        //admin@qq.com
+
 
     }
 })
-console.log(1)
 export default connect(mapStateToProps,mapDispatchToProps)(Mine);

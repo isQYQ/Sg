@@ -1,6 +1,14 @@
 #wikipedia-detail{
     background:#fff;
     font-family: PingFang-SC-Regular;
+    padding-bottom: 20px;
+    .iconfont{
+        font-size: 30px;
+        color: #999999;
+    }
+    .icon-kLike{
+        margin-right: 12px;
+    }
     .content{
         position: absolute;
         top: 44px;
@@ -40,7 +48,7 @@
             margin-top: -30px;
         }
         .pic2{
-            background:url("images/wikipedia_page_photo2.png") no-repeat;    
+            background:url("images/wikipedia_page_photo2.png") no-repeat;
             width:265px;
             height:150px;
             margin-left:50px;
@@ -68,7 +76,7 @@
             padding-left:50px;
         }
         .pic3{
-            background:url("images/wikipedia_page_photo3.png") no-repeat;    
+            background:url("images/wikipedia_page_photo3.png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -89,7 +97,7 @@
             line-height:18px;
         }
         .pic4{
-            background:url("images/wikipedia_page_photo4.png") no-repeat;    
+            background:url("images/wikipedia_page_photo4.png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -111,7 +119,7 @@
             line-height:18px;
         }
         .pic5{
-            background:url("images/wikipedia_page_photo4\ \(1\).png") no-repeat;    
+            background:url("images/wikipedia_page_photo4\ \(1\).png") no-repeat;
             width:265px;
             height:150px;
            margin-left:50px;
@@ -120,6 +128,6 @@
             border-bottom:1px solid #E2E2E2;
             margin-top:49px;
         }
-        
+
     }
 }

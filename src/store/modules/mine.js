@@ -46,6 +46,7 @@ export const requestLoginAction = (email,password)=> async (dispatch)=>{
         let action = setLoginStatusAction(true);
         dispatch(action);
         console.log(result)
+        console.log(document.cookie)
         // document.cookie = 'user=11'
         // console.log(document.cookie.split('; '))
 
