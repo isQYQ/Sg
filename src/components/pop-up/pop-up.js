@@ -26,9 +26,10 @@ class Pop extends Component {
         );
     } 
     idfun(){
+        console.log(this.props)
         switch( this.props.id){
-            case 1:
-                return this.props.pos.history.push("/login/weixin/confirm")
+            case 1:    
+                return this.props.pos.history.push("/login/weixin/confirm") ;
             case 2:
                 return this.props.pos.history.push("/login/qq/confirm")
             case 3:
@@ -39,6 +40,7 @@ class Pop extends Component {
     }
     handeldelet=()=>{
         // alert(1)
+        console.log(this.props.pos)
         // console.log(this.props,999)
         this.props.delect(false)
     }

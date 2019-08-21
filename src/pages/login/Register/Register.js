@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import AppHeader from '../../../components/app-header/app-header'
+import requestSendCodeAction from '../../../store/modules/login'
 import './style.scss'
 import { Toast } from 'antd-mobile';
 import 'antd-mobile/lib/toast/style/css';  
 class Register extends Component {
     state={
         email:'',
-        name:'',
+        nam:'',
         password:''
     }
     render() {
-        let {email,name,password} =this.state;
+        let {endfun} =this.props;
+        let {email,nam,password} =this.state;
         return (
             <div className="page subpage" id="register">
                 <AppHeader title="注册" className="bgcolor"
@@ -29,7 +31,7 @@ class Register extends Component {
                    </div>
                    <div className="inpmine">
                        <input type="text" placeholder="昵称"
-                       value={name}
+                       value={nam}
                        onChange={this.namefun}
                        />
                    </div>
@@ -40,7 +42,7 @@ class Register extends Component {
                        />
                    </div>
                    <div className="inpregister"
-                   /*onClick={()=>endfun(email,name,password)}*/
+                   onClick={()=>endfun(email,nam,password)}
                    >
                        <p>注册</p>
                    </div>
@@ -58,31 +60,45 @@ class Register extends Component {
         this.props.history.goBack();
     };
     emailfun=(ev)=>{
-        this.setState({email:ev.target.email})
+        this.setState({email:ev.target.value})
     };
     namefun=(ev)=>{
-        this.setState({name:ev.target.name})
+        this.setState({nam:ev.target.value})
     };
     passwordfun=(ev)=>{
-        this.setState({password:ev.target.password})
+        this.setState({password:ev.target.value})
     }
 }
 
 const mapStateToProps =(state)=>({
-
+    // focusNumber: state.user.focusNumber
 })
 const mapDispatchToProps=(dispatch)=>({
-           /*endfun(email,name,password){
-               if(!(/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g.test(email))){
-                Toast.info('邮箱格式不正确',2);
-               }else if(!(/^[\u4e00-\u9fa5]{0,}$/.test(name))){
-                Toast.info('请输入中文昵称',2);
-               }else if(!(/^[A-Za-z0-9]{4,40}$/.test(password))){
-                Toast.info('密码为数字或英文字母',2);
+    endfun(email,nam,password){ 
+            let fa=false;
+            if(!(/^\w{2,18}@[0-9a-z]{1,10}(\.[a-z]{2,3}){1,2}$/.test(email))){ 
+               return Toast.info('邮箱格式不正确',2);
                }else{
-
+                fa=true;
                }
-           }*/
+             if(!(/^[A-Za-z]{4,40}$/.test(nam))){
+              return Toast.info('用户名为英文',2);
+               }else{
+                fa=true;
+               }
+            if(!(/^[A-Za-z0-9]{4,40}$/.test(password))){  
+                return Toast.info('密码为数字或英文字母',2);   
+               }else{
+                fa=true;
+               }
+            if(fa){
+                let action = requestSendCodeAction(email,nam,password);
+                dispatch(action);
+            }else{
+                Toast.info('输入有误',2); 
+            }
+            
+           }
 })
 
 export default connect(mapDispatchToProps,mapStateToProps)(Register);
