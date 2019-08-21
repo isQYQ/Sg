@@ -1,0 +1,127 @@
+#articlePage{
+    background:pink;
+    .content{
+        position: absolute;
+        top: 44px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    .pic1{
+        background:url("images/article\ e_photo1.png") no-repeat;
+        width:375px;
+        height:554px;
+        position: relative;
+        .word{
+            font-size:20px;
+            color:#FFFFFF;
+            border-bottom:2px solid #fff;
+            position: absolute;
+            padding-top:340px;
+            padding-left: 30px;
+            line-height: 40px;
+        }
+        .words{
+            font-size:25px;
+            color:#FFFFFF;
+            position: absolute;
+            padding-top:400px;
+            padding-left: 30px;
+            line-height: 40px;
+        }
+    }
+        .page1{
+            font-size:11px;
+            color:#666;
+            width:275px;
+            height:107px;
+            padding:50px;
+            line-height:18px;
+            margin-top: -30px;
+        }
+        .pic2{
+            background:url("images/article\ e_photo2.png") no-repeat;    
+            width:265px;
+            height:150px;
+            margin-left:50px;
+            margin-top: -30px;
+        }
+        .page2{
+            font-size:11px;
+            color:#666;
+            width:275px;
+            height:107px;
+            padding:10px 50px;
+            line-height:18px;
+        }
+        .page3{
+            font-size:11px;
+            color:#666;
+            width:275px;
+            height:107px;
+            padding:10px 50px;
+            line-height:18px;
+        }
+        .tit1{
+            color:#303030;
+            font-size:13px;
+            padding-left:50px;
+            margin-top: -50px;
+        }
+        .pic3{
+            background:url("images/article e_photo3.png") no-repeat;    
+            width:265px;
+            height:150px;
+           margin-left:50px;
+           margin-top: -50px;
+        }
+        .tit2{
+            color:#303030;
+            font-size:13px;
+            padding-left:50px;
+            line-height: 20px;
+            margin-top:10px;
+        }
+        .page4{
+            font-size:11px;
+            color:#666;
+            width:275px;
+            height:107px;
+            padding:10px 50px;
+            line-height:18px;
+        }
+        .pic4{
+            background:url("images/article e_photo4.png") no-repeat;    
+            width:265px;
+            height:150px;
+           margin-left:50px;
+           margin-top: -10px;
+        }
+        .tit3{
+            color:#303030;
+            font-size:13px;
+            padding-left:50px;
+            line-height: 20px;
+            margin-top:10px;
+        }
+        .page5{
+            font-size:11px;
+            color:#666;
+            width:275px;
+            height:107px;
+            padding:10px 50px;
+            line-height:18px;
+        }
+        .pic5{
+            background:url("images/article e_photo5.png") no-repeat;    
+            width:265px;
+            height:150px;
+           margin-left:50px;
+           margin-top: -60px;
+        }
+        .line{
+            border-bottom:1px solid #E2E2E2;
+            margin-top:49px;
+        }
+        
+    }
+}

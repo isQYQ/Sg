@@ -24,8 +24,6 @@ const HomeRecipeDetail = lazy(()=>import('./pages/home/HomeRecipeDetail/HomeReci
 const DiscoverRecipeItem = lazy(()=>import('./pages/discover/DiscoverRecipeItem/DiscoverRecipeItem'));
 const DiscoverRecipeItemDetail = lazy(()=>import('./pages/discover/DiscoverRecipeItemDetail/DiscoverRecipeItemDetail'));
 const DiscoverWikipediaDetail = lazy(()=>import('./pages/discover/DiscoverWikipediaDetail/DiscoverWikipediaDetail'));
-//文章
-const ArticleDetail = lazy(()=>import('./pages/article/ArticleDetail/ArticleDetail'));
 //我的
 const ChangePassword = lazy(()=>import('./pages/mine/ChangePassword/ChangePassword'))
 const ChangeUnit = lazy(()=>import('./pages/mine/ChangeUnit/ChangeUnit'))
@@ -35,6 +33,10 @@ const Message = lazy(()=>import('./pages/mine/Message/Message'))
 const PrivacyPolicy = lazy(()=>import('./pages/mine/PrivacyPolicy/PrivacyPolicy'))
 const RecipeBook = lazy(()=>import('./pages/mine/RecipeBook/RecipeBook'))
 const SetOption = lazy(()=>import('./pages/mine/SetOption/SetOption'))
+//文章
+const ArticleRecipeDetail = lazy(()=>import('./pages/article/ArticleRecipeDetail/ArticleRecipeDetail'));
+
+
 
 //公共
 const UserInfo = lazy(()=>import('./pages/common/UserInfo/UserInfo'))
@@ -56,10 +58,15 @@ const AppPanel = (props)=>{
         {/* 根页面 */}
         <Switch>
           <Route path="/" exact render={()=>{
+<<<<<<< HEAD
             return <Redirect to="/login/direct"/>
+=======
+            return <Redirect to="/mine"/>
+>>>>>>> 70fe6b943d1b6de42cd6ffd2f5268360d5a4524d
           }}/>
           <Route path='/home' exact component={Home}/>
           <Route path='/discover' exact component={Discover}/>
+   
           <Route path='/article' exact component={Article}/>
           <Route path='/mine' exact component={Mine}/>
 
@@ -82,7 +89,7 @@ const AppPanel = (props)=>{
           <Route path="/discover/wikipedia/detail/:id" component={DiscoverWikipediaDetail} />
 
           {/* 文章 */}
-          <Route path="/article/detail" component={ArticleDetail} />
+          <Route path="/article/recipe/detail" component={ArticleRecipeDetail} />
 
           {/* 我的 */}
           <Route path="/mine/change/psw" component={ChangePassword} />
